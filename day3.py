@@ -2,7 +2,7 @@ import numpy
 
 def day3_1():
     triangles = 0
-    with open('day3.dat','r') as data:
+    with open('day3.input','r') as data:
         for d in data:
             xyz = sorted(map(int, d.split()))
             if int(xyz[0]) + int(xyz[1]) > int(xyz[2]):
@@ -11,7 +11,7 @@ def day3_1():
 
 def day3_2():
     triangles = 0
-    data = numpy.loadtxt('day3.dat')
+    data = numpy.loadtxt('day3.input')
     data = numpy.vsplit(data,data.shape[0]/3)
     for d in data:
         d = numpy.transpose(d)
