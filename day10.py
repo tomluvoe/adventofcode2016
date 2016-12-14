@@ -41,6 +41,13 @@ def execute_instruction(bot_pos,instructions,state):
             state[bot_pos]['chips'] = []
     return state
 
+def d10_2(state):
+    prod = 1
+    for s in state:
+        if s['name'] in ['output-0','output-1','output-2']:
+            prod *= s['chips'][0]
+    print 'The product of the values in output 0, 1 and 2 is:',prod
+
 def d10_1():
     state = []
     instr = []
@@ -57,7 +64,8 @@ def d10_1():
         for b in bots_with_two_chips:
             state = execute_instruction(int(b),instr,state)
         bots_with_two_chips = find_bots_with_two_chips(state)
-    #print state
+    return state
 
 if __name__ == "__main__":
-    d10_1()
+    state = d10_1()
+    d10_2(state)
