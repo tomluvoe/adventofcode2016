@@ -3,7 +3,7 @@ def d2_1():
     pos = 4
     mv = {"R": [1,1,0,1,1,0,1,1,0], "L": [0,-1,-1,0,-1,-1,0,-1,-1], "U": [0,0,0,-3,-3,-3,-3,-3,-3], "D": [3,3,3,3,3,3,0,0,0]}
     code = ''
-    with open('day2.input','r') as data:
+    with open('day02.input','r') as data:
         for d in data:
             for c in d.rstrip():
                 pos += mv[c][pos]
@@ -15,7 +15,7 @@ def d2_2():
     pos = 4
     mv = {"R":[0,1,1,0,1,1,1,1,0,1,1,0,0], "L": [0,0,-1,-1,0,-1,-1,-1,-1,0,-1,-1,0], "U": [0,0,-2,0,0,-4,-4,-4,0,-4,-4,-4,-2], "D": [2,4,4,4,0,4,4,4,0,0,2,0,0]}
     code = ''
-    with open('day2.input','r') as data:
+    with open('day02.input','r') as data:
         for d in data:
             for c in d.rstrip():
                 pos += mv[c][pos]

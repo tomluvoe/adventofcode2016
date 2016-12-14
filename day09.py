@@ -9,7 +9,7 @@ def decompressed_length_2(data):
     return length
 
 def d9_1():
-    with open('day9.input','r') as d:
+    with open('day09.input','r') as d:
         data = d.read()
     not_done = True
     length = 0
@@ -24,7 +24,7 @@ def d9_1():
     print "Decompressed length of file #1:",length
 
 def d9_2():
-    with open('day9.input','r') as d:
+    with open('day09.input','r') as d:
         data = d.read()
     length = decompressed_length_2(data)
     print "Decompressed length of file #2:",length

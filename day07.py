@@ -41,7 +41,7 @@ def parse_data(data,brackets):
 
 def d7_1():
     supported = 0
-    with open('day7.input','r') as data:
+    with open('day07.input','r') as data:
         for d in data:
             if not has_abba(parse_data(d,'in')) and \
                 has_abba(parse_data(d,'out')):
@@ -50,7 +50,7 @@ def d7_1():
 
 def d7_2():
     supported = 0
-    with open('day7.input','r') as data:
+    with open('day07.input','r') as data:
         for d in data:
             aba = find_aba(parse_data(d,'out'))
             if find_bab(parse_data(d,'in'),aba):

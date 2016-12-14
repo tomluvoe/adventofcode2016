@@ -30,7 +30,7 @@ def show(disp):
 def d8_1():
     disp = ['.'*50]*6
     lit = 0
-    with open('day8.input','r') as data:
+    with open('day08.input','r') as data:
         for d in data:
             cmd = d.split()
             if cmd == []:

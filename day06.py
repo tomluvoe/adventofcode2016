@@ -2,7 +2,7 @@ import collections
 
 def d6_1():
     signal = ['','','','','','','','']
-    with open('day6.input','r') as data:
+    with open('day06.input','r') as data:
         for d in data:
             for i in range(8):
                 signal[i] += d[i]
@@ -13,7 +13,7 @@ def d6_1():
 
 def d6_2():
     signal = ['','','','','','','','']
-    with open('day6.input','r') as data:
+    with open('day06.input','r') as data:
         for d in data:
             for i in range(8):
                 signal[i] += d[i]

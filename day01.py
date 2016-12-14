@@ -1,5 +1,5 @@
 def d1_1():
-    with open('day1.input','r') as data:
+    with open('day01.input','r') as data:
         indata = data.read()
     ia = indata.split(", ")
     p = [0,0]
@@ -15,7 +15,7 @@ def d1_1():
     print "Distance #1:",abs(p[0])+abs(p[1])
 
 def d1_2():
-    with open('day1.input','r') as data:
+    with open('day01.input','r') as data:
         indata = data.read()
     ia = indata.split(", ")
     p = [0,0]

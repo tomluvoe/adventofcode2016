@@ -1,7 +1,7 @@
 import collections
 
 def d4_1():
-    with open('day4.input','r') as data:
+    with open('day04.input','r') as data:
         total_sec = 0
         for d in data:
             enc = d.rsplit('-',1)[0].replace('-','')
@@ -29,7 +29,7 @@ def d4_1():
     print "Total sector ID sum of real rooms:",total_sec
 
 def d4_2():
-    with open('day4.input','r') as data:
+    with open('day04.input','r') as data:
         for d in data:
             enc = d.rsplit('-',1)[0]
             sec = d.rsplit('-',1)[1].split('[')[0]
