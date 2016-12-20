@@ -14,6 +14,25 @@ def valid_pos(x,y,d,path):
             return True
     return False
 
+def d17_2():
+    start = (0,3)
+    goal = (3,0)
+    search_list = [[0,'',start]]
+    longest_path = ''
+    while len(search_list) > 0:
+        dist,path,pos = search_list.pop(0)
+        for d in move.keys():
+            x,y = pos
+            if valid_pos(x,y,d,path):
+                npath = path+d
+                dx,dy = move[d]
+                search_list.append([dist+1,npath,(x+dx,y+dy)])
+                if x+dx == goal[0] and y+dy == goal[1]:
+                    search_list.pop(-1)
+                    longest_path = dist+1
+        search_list.sort()
+    print 'The length of the longest path to reach the vault is:',longest_path
+
 def d17_1():
     start = (0,3)
     goal = (3,0)
@@ -36,3 +55,4 @@ def d17_1():
 
 if __name__ == '__main__':
     d17_1()
+    d17_2()
